@@ -6,10 +6,11 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+import { Description } from "@mui/icons-material";
 
 //const [jaimeDeja, setJaimeDeja] = useState(false);
 
-function Poste({ utilisateur, image, likes, temps }) {
+function Poste({ utilisateur, image, likes, temps, description }) {
   const [sss, setLikes] = useState(0);
 
   const jaime = () => {
@@ -38,9 +39,7 @@ function Poste({ utilisateur, image, likes, temps }) {
                 <ChatBubbleOutlineIcon className="postIcon" />
                 <div className="personne_bas">
                   <div className="username">{utilisateur}</div>
-                  <div className="description">
-                    Description Description Description
-                  </div>
+                  <div className="description">{description}</div>
                 </div>
               </div>
               <div className="iconSave">
