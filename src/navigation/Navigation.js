@@ -24,7 +24,7 @@ function Navigation() {
           </button>
           <button>
             <HomeIcon />
-            <span>Acceuil</span>
+            <span>Accueil</span>
           </button>
         </div>
         <div className="bouton">
@@ -42,7 +42,7 @@ function Navigation() {
         <div className="bouton">
           <button>
             <SettingsIcon />
-            <span>Parametres</span>
+            <span>Paramètres</span>
           </button>
         </div>
       </div>
