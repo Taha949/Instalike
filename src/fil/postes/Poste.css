@@ -67,13 +67,15 @@ font-weight: bolder;
 }
 .likes {
     padding-top: -3px;
-    vertical-align: 12px;
+    vertical-align: 15px;
+    padding: 1px;
 
 }
 
 .postIcon {
-    padding: 7px;
+    padding: 10px;
     font-size: 30px;
+
 }
 
 .postIcon:hover {

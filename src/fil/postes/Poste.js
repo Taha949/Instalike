@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Poste.css";
 import { Avatar } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
@@ -7,7 +7,15 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 
+//const [jaimeDeja, setJaimeDeja] = useState(false);
+
 function Poste({ utilisateur, image, likes, temps }) {
+  const [sss, setLikes] = useState(0);
+
+  const jaime = () => {
+    setLikes(sss + 1);
+  };
+
   return (
     <div className="postContainer">
       <div className="poste">
@@ -25,9 +33,9 @@ function Poste({ utilisateur, image, likes, temps }) {
           <div className="footer">
             <div className="footerIcons">
               <div className="iconsMain">
-                <FavoriteBorderIcon className="postIcon" />{" "}
+                <FavoriteBorderIcon onClick={jaime} className="postIcon" />{" "}
+                <span className="likes">{likes + sss} likes</span>
                 <ChatBubbleOutlineIcon className="postIcon" />
-                <span className="likes">{likes}likes</span>
                 <div className="personne_bas">
                   <div className="username">{utilisateur}</div>
                   <div className="description">
