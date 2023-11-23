@@ -1,0 +1,13 @@
+.acceuil {
+    display: flex;
+    flex-direction: row;
+}
+
+.acceuil_nav {
+    position: relative;
+    flex: 0.2;
+}
+
+.acceuil_fil {
+    flex: 0.8;
+}
