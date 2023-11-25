@@ -3,18 +3,22 @@ import "./Poste.css";
 import { Avatar } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import TelegramIcon from "@mui/icons-material/Telegram";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { Description } from "@mui/icons-material";
 
-//const [jaimeDeja, setJaimeDeja] = useState(false);
-
 function Poste({ utilisateur, image, likes, temps, description }) {
-  const [sss, setLikes] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
+  const [likesCount, setLikesCount] = useState(likes);
 
   const jaime = () => {
-    setLikes(sss + 1);
+    if (isLiked) {
+      setLikesCount(likesCount - 1);
+    } else {
+      setLikesCount(likesCount + 1);
+    }
+    setIsLiked(!isLiked);
   };
 
   return (
@@ -34,8 +38,12 @@ function Poste({ utilisateur, image, likes, temps, description }) {
           <div className="footer">
             <div className="footerIcons">
               <div className="iconsMain">
-                <FavoriteBorderIcon onClick={jaime} className="postIcon" />{" "}
-                <span className="likes">{likes + sss} likes</span>
+                {isLiked ? (
+                  <FavoriteIcon onClick={jaime} className="postIcon" />
+                ) : (
+                  <FavoriteBorderIcon onClick={jaime} className="postIcon" />
+                )}
+                <span className="likes">{likesCount} likes</span>
                 <ChatBubbleOutlineIcon className="postIcon" />
                 <div className="personne_bas">
                   <div className="username">{utilisateur}</div>
