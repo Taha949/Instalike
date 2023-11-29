@@ -5,14 +5,14 @@ import Poste from "./postes/Poste";
 function Fil() {
   const [postes, setPostes] = useState([
     {
-      utilisateur: "taha.maata",
+      utilisateur: "Taha.maata",
       image: "campus.png",
       likes: 54,
       temps: "1d",
       description: "Campus UGA",
     },
     {
-      utilisateur: "thomas_foret",
+      utilisateur: "Thomas_foret",
       image:
         "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80",
       likes: 432,
@@ -28,7 +28,7 @@ function Fil() {
       description: "Nice bridge",
     },
     {
-      utilisateur: "kobee_18",
+      utilisateur: "Kobee_18",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGCAaQ5u1TMTij5ELPWi5-VPtlSqELw-R6lj0EpYmNcGt56kOQaCokzS0IK81MOSphlkw&usqp=CAU",
       likes: 14,
