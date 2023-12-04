@@ -9,5 +9,42 @@
 }
 
 .acceuil_fil {
-    flex: 0.8;
+    flex: 0.65;
+}
+.acceuil {
+    position: relative;
+    min-height: 100vh;
+
+}
+
+.add-post-button {
+    position: fixed;
+    bottom: 20px;
+
+    right: 700px;
+
+    background-color: rgba(0, 0, 0, 0.718);
+    color: #fff;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-post-form {
+    position: fixed;
+    bottom: 100px;
+    color: black;
+    align-items: row;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 1000;
 }

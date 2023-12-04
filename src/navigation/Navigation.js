@@ -20,7 +20,7 @@ function Navigation() {
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZkn1jq7Y_no3d4KLY3w9y4aOwSWtoenBPKw&usqp=CAU"
               alt="Nom de l'utilisateur"
             />
-            <span>Utilisateur</span>
+            <span>Toto38</span>
           </button>
           <button>
             <HomeIcon />

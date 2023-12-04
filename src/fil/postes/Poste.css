@@ -81,3 +81,26 @@ font-weight: bolder;
 .postIcon:hover {
     cursor: pointer;
 }
+
+.comments {
+    margin-top: 10px;
+
+}
+.description {
+    margin-left: 10px;
+}
+
+.ajout_com{
+    margin-left: 20px;
+}
+.comments div {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.comments strong {
+    margin-right: 5px;
+}

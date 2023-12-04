@@ -6,9 +6,6 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-import { Description } from "@mui/icons-material";
-
-// ... (votre importation de réact et autres icônes)
 
 function Poste({ utilisateur, image, likes, temps, description }) {
   const [isLiked, setIsLiked] = useState(false);
@@ -33,7 +30,7 @@ function Poste({ utilisateur, image, likes, temps, description }) {
   const handleCommentSubmit = () => {
     if (commentText.trim() !== "") {
       const newComment = {
-        user: "Toto",
+        user: "Toto38",
         text: commentText,
       };
 
@@ -57,7 +54,9 @@ function Poste({ utilisateur, image, likes, temps, description }) {
       <div className="poste">
         <div className="entete">
           <div className="personne">
-            <Avatar>{utilisateur.charAt(0).toUpperCase()}</Avatar>
+            <Avatar alt={utilisateur}>
+              {utilisateur.charAt(0).toUpperCase()}
+            </Avatar>
             {utilisateur} <span>{temps}</span>
           </div>
           <MoreHorizIcon />
@@ -83,7 +82,7 @@ function Poste({ utilisateur, image, likes, temps, description }) {
                   onClick={handleToggleCommentInput}
                 />
                 <div className="personne_bas">
-                  <div className="username">{utilisateur}</div>
+                  <div className="username">{utilisateur} :</div>
                   <div className="description">{description}</div>
                   {showCommentInput && (
                     <div className="comments">
@@ -96,6 +95,7 @@ function Poste({ utilisateur, image, likes, temps, description }) {
                   )}
                   {showCommentInput && (
                     <input
+                      className="ajout_com"
                       type="text"
                       placeholder="Ajouter un commentaire..."
                       value={commentText}
