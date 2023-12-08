@@ -3,7 +3,7 @@ import "./NewPost.css";
 
 const NewPost = ({ onAddPost }) => {
   const [nouveauPoste, setNouveauPoste] = useState({
-    utilisateur: "Toto38",
+    utilisateur: "Lisa",
     likes: 0,
     image: "",
     description: "",
@@ -48,7 +48,7 @@ const NewPost = ({ onAddPost }) => {
     onAddPost(nouveauPosteData);
 
     setNouveauPoste({
-      utilisateur: "Toto38",
+      utilisateur: "Lisa",
       likes: 0,
       image: "",
       description: "",

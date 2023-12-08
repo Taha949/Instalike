@@ -30,7 +30,7 @@ function Poste({ utilisateur, image, likes, temps, description }) {
   const handleCommentSubmit = () => {
     if (commentText.trim() !== "") {
       const newComment = {
-        user: "Toto38",
+        user: "Lisa",
         text: commentText,
       };
 

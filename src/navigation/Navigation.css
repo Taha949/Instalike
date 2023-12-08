@@ -58,3 +58,13 @@
     margin-right: 10px;
     border-radius: 50%;
 }
+/* Add styles for the messaging button */
+.bouton a {
+    display: flex;
+        font-size: 18px;
+            font-weight: bolder;
+            margin-left: 25px;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
