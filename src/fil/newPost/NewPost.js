@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./NewPost.css";
 
 const NewPost = ({ onAddPost }) => {
   const [nouveauPoste, setNouveauPoste] = useState({
@@ -14,6 +15,22 @@ const NewPost = ({ onAddPost }) => {
       ...prevPoste,
       [name]: value,
     }));
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setNouveauPoste((prevPoste) => ({
+        ...prevPoste,
+        image: reader.result,
+      }));
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
   };
 
   const handleAddPostSubmit = (e) => {
@@ -42,12 +59,11 @@ const NewPost = ({ onAddPost }) => {
     <div className="add-post-form">
       <form onSubmit={handleAddPostSubmit}>
         <label>
-          Image (URL):
+          Image (Upload):
           <input
-            type="text"
-            name="image"
-            value={nouveauPoste.image}
-            onChange={handleFormChange}
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
             required
           />
         </label>

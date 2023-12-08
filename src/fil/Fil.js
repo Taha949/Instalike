@@ -1,6 +1,5 @@
 import React from "react";
 import Poste from "./postes/Poste";
-import Messagerie from "./meesagerie/Messagerie";
 
 function Fil({ postes }) {
   return (

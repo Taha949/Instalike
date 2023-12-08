@@ -1,0 +1,59 @@
+.suggestions {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.suggestions__title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.suggestions__usernames {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggestions__username {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.username__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.username__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.relation {
+    font-size: 12px;
+    color: gray;
+}
+
+.follow__button {
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

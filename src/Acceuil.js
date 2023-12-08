@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import "./Acceuil.css";
 import Navigation from "./navigation/Navigation";
 import Fil from "./fil/Fil";
-import Messagerie from "./fil/meesagerie/Messagerie";
-import AddPostForm from "./NewPost";
-import postData from "./postData.json"; // Update the path accordingly
+import AddPostForm from "./fil/newPost/NewPost";
+import postData from "./postData.json";
+import Suggestions from "./suggestions/Suggestions";
 
 function Acceuil() {
   const [showAddPostForm, setShowAddPostForm] = useState(false);
   const [postes, setPostes] = useState(postData);
 
   const handleAddPostClick = () => {
-    setShowAddPostForm(true);
+    setShowAddPostForm((prevShowAddPostForm) => !prevShowAddPostForm);
   };
 
   const handleAddPost = (nouveauPosteData) => {
@@ -28,7 +28,7 @@ function Acceuil() {
         <Fil postes={postes} />
       </div>
       <div>
-        <Messagerie />
+        <Suggestions />
       </div>
 
       <div className="add-post-button" onClick={handleAddPostClick}>
