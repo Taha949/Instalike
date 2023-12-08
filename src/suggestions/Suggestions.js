@@ -2,6 +2,7 @@ import { Avatar } from "@mui/material";
 import React, { useState } from "react";
 import "./Suggestions.css";
 import suggestionsData from "./suggestions.json";
+import { Link } from "react-router-dom";
 
 function Suggestions() {
   // Use a state variable to keep track of the followed users
@@ -26,9 +27,11 @@ function Suggestions() {
         {suggestionsData.map((user) => (
           <div key={user.id} className="suggestions__username">
             <div>
-              <span className="avatar">
-                <Avatar>{user.avatar}</Avatar>
-              </span>
+              <Link to="/profile__">
+                <span className="avatar">
+                  <Avatar>{user.avatar}</Avatar>
+                </span>
+              </Link>
               <div className="username__info">
                 <span className="username">{user.username}</span>
                 <span className="relation">{user.relation}</span>

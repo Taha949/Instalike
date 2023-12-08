@@ -4,6 +4,7 @@ import Acceuil from "./Acceuil";
 import Profile from "./profil/Profile";
 import Messagerie from "./messagerie/Messagerie";
 import "./App.css";
+import Profile__ from "./profil/Profile__";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Link to="/messagerie">Messagerie</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/acceuil">Acceuil</Link>
+          <Link to="/profile__">Profile__</Link>
         </nav>
 
         <Routes>
@@ -21,6 +23,7 @@ function App() {
           <Route path="/messagerie" element={<Messagerie />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/acceuil" element={<Acceuil />} />
+          <Route path="/profile__" element={<Profile__ />} />
         </Routes>
       </div>
     </Router>
