@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import ChatIcon from "@mui/icons-material/Chat";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { Button } from "@mui/material";
 
 function Navigation() {
   return (
@@ -33,10 +34,12 @@ function Navigation() {
           </button>
         </div>
         <div className="bouton">
-          <Link to="/messagerie">
-            <ChatIcon />
-            <span>Messagerie</span>
-          </Link>
+          <button>
+            <Link to="/messagerie">
+              <ChatIcon />
+              <span>Messagerie</span>
+            </Link>
+          </button>
         </div>
         <div className="bouton">
           <button>
