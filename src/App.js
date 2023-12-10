@@ -10,14 +10,6 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <nav>
-          <Link to="/">Accueil</Link>
-          <Link to="/messagerie">Messagerie</Link>
-          <Link to="/profile">Profile</Link>
-          <Link to="/acceuil">Acceuil</Link>
-          <Link to="/profile__">Profile__</Link>
-        </nav>
-
         <Routes>
           <Route path="/" element={<Acceuil />} />
           <Route path="/messagerie" element={<Messagerie />} />
